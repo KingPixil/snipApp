@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Snip
 //
-//  Created by Gopal Shah on 8/2/16.
+//  Created by Kabir Shah on 8/2/16.
 //  Copyright © 2016 Kabir Shah. All rights reserved.
 //
 
