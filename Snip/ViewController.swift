@@ -53,6 +53,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         
         return true;
     }
+    
+    func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    override func shouldAutorotate() -> Bool {
+        // Lock autorotate
+        return false
+    }
         
     
 
