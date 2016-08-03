@@ -15,7 +15,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(red:0.01, green:0.09, blue:0.17, alpha:1.0);
+        self.view.backgroundColor = UIColor(red:0.01, green:0.09, blue:0.17, alpha:1.0)
+        
+        snipLabel.textColor = UIColor(red:0.00, green:0.59, blue:0.96, alpha:1.0)
     }
 
     override func didReceiveMemoryWarning() {
