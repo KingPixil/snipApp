@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         
         var urlToShorten = textField.text
         
-        let url = NSURL(string: "https://snip-kingsofcoding.c9users.io/shorten/url?url=http://" + urlToShorten!)
+        let url = NSURL(string: "https://snipit.herokuapp.com/shorten/url?url=http://" + urlToShorten!)
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             self.snippedURL = NSString(data: data!, encoding: NSUTF8StringEncoding)
@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         if segue.identifier == "ShowURLDetailSegue"
         {
             if let destinationVC = segue.destinationViewController as? URLDetailViewController {
-                destinationVC.url = "URL"
+                destinationVC.url = snippedURL
             }
         }
     }

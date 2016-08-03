@@ -10,13 +10,21 @@ import UIKit
 
 class URLDetailViewController: UIViewController {
 
+    @IBOutlet var successLabel: UILabel!
     @IBOutlet var linkButton: UIButton!
     @IBOutlet var shareButton: UIButton!
     var url: NSString?
+    var snippedUrl: [String: AnyObject?]?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.view.backgroundColor = UIColor(red:0.01, green:0.09, blue:0.17, alpha:1.0)
+        
+        successLabel.textColor = UIColor(red:0.00, green:0.59, blue:0.96, alpha:1.0)
+        
+        snippedUrl = convertStringToDictionary(String(url!))!
+        
+        linkButton.setTitle(snippedUrl?["snippedURL"] as! String, forState: .Normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,15 +34,28 @@ class URLDetailViewController: UIViewController {
     
 
     @IBAction func linkButtonClicked(sender: UIButton) {
-        UIPasteboard.generalPasteboard().string = String(url);
+        UIPasteboard.generalPasteboard().string = snippedUrl?["snippedURL"] as! String;
     }
     
     @IBAction func shareButtonClicked(sender: UIButton) {
+        displayShareSheet(snippedUrl?["snippedURL"] as! String)
     }
     
     func displayShareSheet(shareContent:String) {
+        print(shareContent)
         let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
         presentViewController(activityViewController, animated: true, completion: {})
+    }
+    
+    func convertStringToDictionary(text: String) -> [String:AnyObject]? {
+        if let data = text.dataUsingEncoding(NSUTF8StringEncoding) {
+            do {
+                return try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [String:AnyObject]
+            } catch let error as NSError {
+                print(error)
+            }
+        }
+        return nil
     }
     /*
     // MARK: - Navigation
