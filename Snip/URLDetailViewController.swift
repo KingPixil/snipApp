@@ -26,9 +26,15 @@ class URLDetailViewController: UIViewController {
     
 
     @IBAction func linkButtonClicked(sender: UIButton) {
+        UIPasteboard.generalPasteboard().string = String(url);
     }
     
     @IBAction func shareButtonClicked(sender: UIButton) {
+    }
+    
+    func displayShareSheet(shareContent:String) {
+        let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
+        presentViewController(activityViewController, animated: true, completion: {})
     }
     /*
     // MARK: - Navigation
