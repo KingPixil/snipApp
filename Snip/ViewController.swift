@@ -18,6 +18,13 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor(red:0.01, green:0.09, blue:0.17, alpha:1.0)
         
         snipLabel.textColor = UIColor(red:0.00, green:0.59, blue:0.96, alpha:1.0)
+        
+        urlTextField.textColor = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.0)
+        let str = NSAttributedString(string: "URL", attributes: [NSForegroundColorAttributeName:UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.0)])
+        urlTextField.attributedPlaceholder = str
+        urlTextField.backgroundColor = UIColor.clearColor()
+        urlTextField.layer.borderWidth = 3
+        urlTextField.layer.borderColor = UIColor(red:0.00, green:0.59, blue:0.96, alpha:1.0).CGColor
     }
 
     override func didReceiveMemoryWarning() {
