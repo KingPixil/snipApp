@@ -57,6 +57,15 @@ class URLDetailViewController: UIViewController {
         }
         return nil
     }
+    
+    func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    override func shouldAutorotate() -> Bool {
+        // Lock autorotate
+        return false
+    }
+
     /*
     // MARK: - Navigation
 
