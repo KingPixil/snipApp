@@ -14,6 +14,7 @@
 		28761CD11D516178005C688B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28761CCF1D516178005C688B /* LaunchScreen.storyboard */; };
 		28761CDC1D516179005C688B /* SnipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28761CDB1D516179005C688B /* SnipTests.swift */; };
 		28761CE71D516179005C688B /* SnipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28761CE61D516179005C688B /* SnipUITests.swift */; };
+		28761CF51D52762B005C688B /* URLDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28761CF41D52762B005C688B /* URLDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		28761CE21D516179005C688B /* SnipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28761CE61D516179005C688B /* SnipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipUITests.swift; sourceTree = "<group>"; };
 		28761CE81D516179005C688B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28761CF41D52762B005C688B /* URLDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				28761CC61D516178005C688B /* AppDelegate.swift */,
 				28761CC81D516178005C688B /* ViewController.swift */,
 				28761CCA1D516178005C688B /* Main.storyboard */,
+				28761CF41D52762B005C688B /* URLDetailViewController.swift */,
 				28761CCD1D516178005C688B /* Assets.xcassets */,
 				28761CCF1D516178005C688B /* LaunchScreen.storyboard */,
 				28761CD21D516178005C688B /* Info.plist */,
@@ -259,6 +262,7 @@
 			files = (
 				28761CC91D516178005C688B /* ViewController.swift in Sources */,
 				28761CC71D516178005C688B /* AppDelegate.swift in Sources */,
+				28761CF51D52762B005C688B /* URLDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

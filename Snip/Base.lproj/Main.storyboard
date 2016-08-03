@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -40,11 +41,44 @@
                     <connections>
                         <outlet property="snipLabel" destination="GwB-tl-PSu" id="tdb-B9-B9R"/>
                         <outlet property="urlTextField" destination="xwI-nM-SfM" id="znL-wf-DyW"/>
+                        <segue destination="NZ7-Hk-fCl" kind="show" identifier="ShowURLDetailSegue" id="B1E-7W-4kl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="346"/>
+            <point key="canvasLocation" x="292" y="346"/>
+        </scene>
+        <!--URL Detail View Controller-->
+        <scene sceneID="JDd-Zf-TyO">
+            <objects>
+                <viewController id="NZ7-Hk-fCl" customClass="URLDetailViewController" customModule="Snip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2v5-ZA-ydH"/>
+                        <viewControllerLayoutGuide type="bottom" id="t94-KL-Slq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oa3-0w-YHL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rfL-O2-uOw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rfL-O2-uOw" firstAttribute="centerY" secondItem="Oa3-0w-YHL" secondAttribute="centerY" id="GPA-8I-jzg"/>
+                            <constraint firstItem="rfL-O2-uOw" firstAttribute="top" secondItem="Oa3-0w-YHL" secondAttribute="topMargin" id="Gls-Jw-DHn"/>
+                            <constraint firstItem="t94-KL-Slq" firstAttribute="top" secondItem="rfL-O2-uOw" secondAttribute="bottom" id="OU5-gs-pkc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rfL-O2-uOw" secondAttribute="trailing" id="Smt-i9-mmI"/>
+                            <constraint firstItem="rfL-O2-uOw" firstAttribute="centerX" secondItem="Oa3-0w-YHL" secondAttribute="centerX" id="ouT-yd-6qi"/>
+                            <constraint firstItem="rfL-O2-uOw" firstAttribute="leading" secondItem="Oa3-0w-YHL" secondAttribute="leadingMargin" id="xE3-mF-gal"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGi-Am-11H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010" y="346"/>
         </scene>
     </scenes>
 </document>
