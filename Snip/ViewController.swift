@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var snipLabel: UILabel!
     @IBOutlet var urlTextField: UITextField!
@@ -35,6 +35,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        var urlToShorten = textField.text
+        
+        let url = NSURL(string: "https://snip-kingsofcoding.c9users.io/shorten/url?url=http://" + urlToShorten!)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+        }
+        
+        task.resume()
+        
         return true;
     }
         
