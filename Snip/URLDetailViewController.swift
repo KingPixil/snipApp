@@ -58,6 +58,10 @@ class URLDetailViewController: UIViewController {
         return nil
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }
+    
     func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.Portrait
     }
