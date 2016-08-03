@@ -14,10 +14,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var urlTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        urlTextField.delegate = self;
         
         self.view.backgroundColor = UIColor(red:0.01, green:0.09, blue:0.17, alpha:1.0)
-        
-        urlTextField.delegate = self
         
         snipLabel.textColor = UIColor(red:0.00, green:0.59, blue:0.96, alpha:1.0)
         
@@ -32,11 +31,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    
+        
+    }
     
     override func prefersStatusBarHidden() -> Bool {
-        return true
+        return true;
     }
+        
+    
 
 
 }
