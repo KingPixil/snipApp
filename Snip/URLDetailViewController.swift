@@ -10,6 +10,7 @@ import UIKit
 
 class URLDetailViewController: UIViewController {
 
+    var url: NSString?
     override func viewDidLoad() {
         super.viewDidLoad()
 

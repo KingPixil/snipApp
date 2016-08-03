@@ -12,9 +12,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
 
     @IBOutlet var snipLabel: UILabel!
     @IBOutlet var urlTextField: UITextField!
+    
+    var snippedURL: NSString?
     override func viewDidLoad() {
         super.viewDidLoad()
         urlTextField.delegate = self;
+        
         
         self.view.backgroundColor = UIColor(red:0.01, green:0.09, blue:0.17, alpha:1.0)
         
@@ -46,12 +49,25 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         let url = NSURL(string: "https://snip-kingsofcoding.c9users.io/shorten/url?url=http://" + urlToShorten!)
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+            self.snippedURL = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            dispatch_async(dispatch_get_main_queue(), {
+                self.performSegueWithIdentifier("ShowURLDetailSegue", sender: textField)
+            })
+            
         }
         
         task.resume()
         
         return true;
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowURLDetailSegue"
+        {
+            if let destinationVC = segue.destinationViewController as? URLDetailViewController {
+                destinationVC.url = "URL"
+            }
+        }
     }
     
     func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> UIInterfaceOrientationMask {
@@ -61,7 +77,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         // Lock autorotate
         return false
     }
-        
+    
     
 
 
