@@ -10,6 +10,8 @@ import UIKit
 
 class URLDetailViewController: UIViewController {
 
+    @IBOutlet var linkButton: UIButton!
+    @IBOutlet var shareButton: UIButton!
     var url: NSString?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,9 @@ class URLDetailViewController: UIViewController {
     }
     
 
+    @IBAction func linkButtonClicked(sender: UIButton) {
+    }
+    @IBOutlet var shareButtonClicked: UIButton!
     /*
     // MARK: - Navigation
 

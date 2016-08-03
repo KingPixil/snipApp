@@ -63,8 +63,12 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rfL-O2-uOw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-KH-w3I">
+                                        <rect key="frame" x="527" y="546" width="40" height="30"/>
+                                        <state key="normal" title="Share"/>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Success! Here is your link:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wz-Be-kVQ">
-                                        <rect key="frame" x="122" y="190" width="356" height="47"/>
+                                        <rect key="frame" x="122" y="257" width="356" height="47"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -73,11 +77,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="5Wz-Be-kVQ" firstAttribute="centerX" secondItem="rfL-O2-uOw" secondAttribute="centerX" id="IwA-JN-sQV"/>
+                                    <constraint firstAttribute="trailing" secondItem="WTs-KH-w3I" secondAttribute="trailing" constant="35" id="Kdz-yj-Nd7"/>
+                                    <constraint firstAttribute="bottom" secondItem="WTs-KH-w3I" secondAttribute="bottom" constant="25" id="hc5-rF-ChF"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2Y-pN-4Cg">
-                                <rect key="frame" x="285" y="298" width="30" height="30"/>
+                                <rect key="frame" x="285" y="344" width="30" height="30"/>
                                 <state key="normal" title="Link"/>
+                                <connections>
+                                    <action selector="linkButtonClicked:" destination="NZ7-Hk-fCl" eventType="touchUpInside" id="uPH-xU-HTy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,6 +108,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="linkButton" destination="e2Y-pN-4Cg" id="8LB-gP-pkM"/>
+                        <outlet property="shareButton" destination="WTs-KH-w3I" id="WFJ-OE-lvD"/>
+                        <outlet property="shareButtonClicked" destination="WTs-KH-w3I" id="uaP-AT-wmZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGi-Am-11H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
