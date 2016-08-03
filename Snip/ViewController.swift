@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var snipLabel: UILabel!
+    @IBOutlet var urlTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
