@@ -27,7 +27,9 @@ class URLDetailViewController: UIViewController {
 
     @IBAction func linkButtonClicked(sender: UIButton) {
     }
-    @IBOutlet var shareButtonClicked: UIButton!
+    
+    @IBAction func shareButtonClicked(sender: UIButton) {
+    }
     /*
     // MARK: - Navigation
 

@@ -66,6 +66,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-KH-w3I">
                                         <rect key="frame" x="527" y="546" width="40" height="30"/>
                                         <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="shareButtonClicked:" destination="NZ7-Hk-fCl" eventType="touchUpInside" id="Ks5-EF-5XM"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Success! Here is your link:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wz-Be-kVQ">
                                         <rect key="frame" x="122" y="257" width="356" height="47"/>
@@ -111,7 +114,6 @@
                     <connections>
                         <outlet property="linkButton" destination="e2Y-pN-4Cg" id="8LB-gP-pkM"/>
                         <outlet property="shareButton" destination="WTs-KH-w3I" id="WFJ-OE-lvD"/>
-                        <outlet property="shareButtonClicked" destination="WTs-KH-w3I" id="uaP-AT-wmZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGi-Am-11H" userLabel="First Responder" sceneMemberID="firstResponder"/>
