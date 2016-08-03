@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var snipLabel: UILabel!
     @IBOutlet var urlTextField: UITextField!
@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor(red:0.01, green:0.09, blue:0.17, alpha:1.0)
+        
+        urlTextField.delegate = selfs
         
         snipLabel.textColor = UIColor(red:0.00, green:0.59, blue:0.96, alpha:1.0)
         
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    
     
     override func prefersStatusBarHidden() -> Bool {
         return true
