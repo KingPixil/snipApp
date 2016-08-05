@@ -36,6 +36,7 @@ class URLDetailViewController: UIViewController {
 
     @IBAction func linkButtonClicked(sender: UIButton) {
         UIPasteboard.generalPasteboard().string = snippedUrl?["snippedURL"] as! String;
+        UIApplication.sharedApplication().openURL(NSURL(string: snippedUrl?["snippedURL"] as! String!)!)
     }
     
     @IBAction func shareButtonClicked(sender: UIButton) {
