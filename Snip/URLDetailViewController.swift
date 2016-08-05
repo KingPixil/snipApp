@@ -25,6 +25,7 @@ class URLDetailViewController: UIViewController {
         snippedUrl = convertStringToDictionary(String(url!))!
         
         linkButton.setTitle(snippedUrl?["snippedURL"] as! String, forState: .Normal)
+        shareButton.setImage(UIImage(named: "ShareIcon") as UIImage?, forState: .Normal)
     }
 
     override func didReceiveMemoryWarning() {
