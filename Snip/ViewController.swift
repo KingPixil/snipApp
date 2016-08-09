@@ -45,8 +45,22 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         textField.resignFirstResponder()
         
         var urlToShorten = textField.text
+        let httpCheckIndex = urlToShorten!.startIndex.advancedBy(7)
+        let httpCheck = urlToShorten!.substringToIndex(httpCheckIndex)
         
-        let url = NSURL(string: "https://snipit.herokuapp.com/shorten/url?url=http://" + urlToShorten!)
+        let httpsCheckIndex = urlToShorten!.startIndex.advancedBy(8)
+        let httpsCheck = urlToShorten!.substringToIndex(httpsCheckIndex)
+        
+        print(httpCheck)
+        
+        let url : NSURL?
+        if httpCheck == "http://" {
+            url = NSURL(string: "https://snipit.herokuapp.com/shorten/url?url=" + urlToShorten!)
+        } else if httpsCheck == "https://" {
+            url = NSURL(string: "https://snipit.herokuapp.com/shorten/url?url=" + urlToShorten!)
+        } else {
+            url = NSURL(string: "https://snipit.herokuapp.com/shorten/url?url=http://" + urlToShorten!)
+        }
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             self.snippedURL = NSString(data: data!, encoding: NSUTF8StringEncoding)

@@ -84,8 +84,8 @@
                         <constraints>
                             <constraint firstItem="e2Y-pN-4Cg" firstAttribute="centerX" secondItem="Oa3-0w-YHL" secondAttribute="centerX" id="2sm-BV-z9D"/>
                             <constraint firstAttribute="bottomMargin" secondItem="WTs-KH-w3I" secondAttribute="bottom" constant="50" id="Kso-Yd-QLX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WTs-KH-w3I" secondAttribute="trailing" constant="25" id="T6A-yY-gzI"/>
                             <constraint firstItem="5Wz-Be-kVQ" firstAttribute="centerX" secondItem="Oa3-0w-YHL" secondAttribute="centerX" id="c2c-eh-pXJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WTs-KH-w3I" secondAttribute="trailing" constant="50" id="qcR-xG-Ptn"/>
                         </constraints>
                     </view>
                     <connections>
