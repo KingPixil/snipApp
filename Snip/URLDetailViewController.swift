@@ -30,9 +30,16 @@ class URLDetailViewController: UIViewController {
         backButton.setImage(UIImage(named: "BackArrow") as UIImage?, forState: .Normal)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }
+    
+    func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    override func shouldAutorotate() -> Bool {
+        // Lock autorotate
+        return false
     }
     
 
@@ -69,18 +76,6 @@ class URLDetailViewController: UIViewController {
         return nil
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true;
-    }
-    
-    func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Portrait
-    }
-    override func shouldAutorotate() -> Bool {
-        // Lock autorotate
-        return false
-    }
-
     /*
     // MARK: - Navigation
 
