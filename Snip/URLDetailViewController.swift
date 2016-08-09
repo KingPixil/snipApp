@@ -46,6 +46,7 @@ class URLDetailViewController: UIViewController {
     }
     
     @IBAction func backButtonClicked(sender: UIButton) {
+        self.performSegueWithIdentifier("unwindToMainSegue", sender: self)
     }
     func displayShareSheet(shareContent:String) {
         print(shareContent)
