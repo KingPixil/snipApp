@@ -54,11 +54,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         
         let url : NSURL?
         if httpCheck == "http://" {
-            url = NSURL(string: "https://snipit.herokuapp.com/shorten/url?url=" + urlToShorten!)
+            url = NSURL(string: "https://snipit.herokuapp.com/shorten/v1?url=" + urlToShorten!)
         } else if httpsCheck == "https://" {
-            url = NSURL(string: "https://snipit.herokuapp.com/shorten/url?url=" + urlToShorten!)
+            url = NSURL(string: "https://snipit.herokuapp.com/shorten/v1?url=" + urlToShorten!)
         } else {
-            url = NSURL(string: "https://snipit.herokuapp.com/shorten/url?url=http://" + urlToShorten!)
+            url = NSURL(string: "https://snipit.herokuapp.com/shorten/v1?url=http://" + urlToShorten!)
         }
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
