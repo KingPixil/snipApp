@@ -98,9 +98,11 @@
                         <outlet property="linkButton" destination="e2Y-pN-4Cg" id="8LB-gP-pkM"/>
                         <outlet property="shareButton" destination="WTs-KH-w3I" id="WFJ-OE-lvD"/>
                         <outlet property="successLabel" destination="5Wz-Be-kVQ" id="wex-Px-Fzm"/>
+                        <segue destination="IFA-4X-Ppe" kind="unwind" identifier="unwindToMainSegue" unwindAction="unwindToMain:" id="aJs-Sh-BQi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGi-Am-11H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IFA-4X-Ppe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1010" y="346"/>
         </scene>
