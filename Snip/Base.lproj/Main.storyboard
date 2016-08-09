@@ -67,28 +67,34 @@
                                     <action selector="linkButtonClicked:" destination="NZ7-Hk-fCl" eventType="touchUpInside" id="uPH-xU-HTy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-KH-w3I">
-                                <rect key="frame" x="497" y="516" width="27" height="39"/>
-                                <connections>
-                                    <action selector="shareButtonClicked:" destination="NZ7-Hk-fCl" eventType="touchUpInside" id="Ks5-EF-5XM"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Success!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Wz-Be-kVQ">
                                 <rect key="frame" x="159" y="173" width="283" height="75"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="75"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-KH-w3I">
+                                <rect key="frame" x="497" y="516" width="27" height="39"/>
+                                <connections>
+                                    <action selector="shareButtonClicked:" destination="NZ7-Hk-fCl" eventType="touchUpInside" id="Ks5-EF-5XM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIQ-Mc-Jm2">
+                                <rect key="frame" x="40" y="36" width="39" height="30"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="e2Y-pN-4Cg" firstAttribute="centerX" secondItem="Oa3-0w-YHL" secondAttribute="centerX" id="2sm-BV-z9D"/>
+                            <constraint firstItem="QIQ-Mc-Jm2" firstAttribute="top" secondItem="Oa3-0w-YHL" secondAttribute="topMargin" constant="25" id="ARO-QR-D3l"/>
                             <constraint firstAttribute="bottomMargin" secondItem="WTs-KH-w3I" secondAttribute="bottom" constant="50" id="Kso-Yd-QLX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WTs-KH-w3I" secondAttribute="trailing" constant="25" id="T6A-yY-gzI"/>
                             <constraint firstItem="5Wz-Be-kVQ" firstAttribute="centerX" secondItem="Oa3-0w-YHL" secondAttribute="centerX" id="c2c-eh-pXJ"/>
+                            <constraint firstItem="QIQ-Mc-Jm2" firstAttribute="leading" secondItem="Oa3-0w-YHL" secondAttribute="leadingMargin" constant="25" id="sXr-ng-TKs"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="QIQ-Mc-Jm2" id="bKj-ib-Gfp"/>
                         <outlet property="linkButton" destination="e2Y-pN-4Cg" id="8LB-gP-pkM"/>
                         <outlet property="shareButton" destination="WTs-KH-w3I" id="WFJ-OE-lvD"/>
                         <outlet property="successLabel" destination="5Wz-Be-kVQ" id="wex-Px-Fzm"/>

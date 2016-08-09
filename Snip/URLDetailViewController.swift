@@ -10,6 +10,7 @@ import UIKit
 
 class URLDetailViewController: UIViewController {
 
+    @IBOutlet var backButton: UIButton!
     @IBOutlet var successLabel: UILabel!
     @IBOutlet var linkButton: UIButton!
     @IBOutlet var shareButton: UIButton!
