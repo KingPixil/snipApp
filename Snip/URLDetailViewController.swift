@@ -45,6 +45,8 @@ class URLDetailViewController: UIViewController {
         displayShareSheet(snippedUrl?["snippedURL"] as! String)
     }
     
+    @IBAction func backButtonClicked(sender: UIButton) {
+    }
     func displayShareSheet(shareContent:String) {
         print(shareContent)
         let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
