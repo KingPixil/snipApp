@@ -51,7 +51,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         let httpsCheckIndex = urlToShorten!.startIndex.advancedBy(8)
         let httpsCheck = urlToShorten!.substringToIndex(httpsCheckIndex)
         
-        print(httpCheck)
         
         let url : NSURL?
         if httpCheck == "http://" {
