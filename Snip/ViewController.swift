@@ -41,6 +41,22 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         return true;
     }
     
+    func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    override func shouldAutorotate() -> Bool {
+        // Lock autorotate
+        return false
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowURLDetailSegue" {
+            if let destinationVC = segue.destinationViewController as? URLDetailViewController {
+                destinationVC.url = snippedURL
+            }
+        }
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
@@ -72,23 +88,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
         task.resume()
         
         return true;
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowURLDetailSegue"
-        {
-            if let destinationVC = segue.destinationViewController as? URLDetailViewController {
-                destinationVC.url = snippedURL
-            }
-        }
-    }
-    
-    func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Portrait
-    }
-    override func shouldAutorotate() -> Bool {
-        // Lock autorotate
-        return false
     }
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {}
