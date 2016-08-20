@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snip/URLDetailViewController.swift"
-            timestampString = "492398881.18867"
+            timestampString = "492399719.884587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "shareButtonClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
